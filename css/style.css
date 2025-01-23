@@ -1,0 +1,316 @@
+:root {
+  --firstColor: #000000;
+  --colorHover: #ffffff;
+  --colorNavnoHover: #efefef;
+
+  --latarBackground: #eef5ff;
+
+  --primaryNavBackground: #0f617d;
+  --buttonnoHover: #00ffc8;
+  --buttonBorderColor: #00ddad;
+  --colorTabel: #75dcff;
+  --columnColor: #1fa1cc;
+  --borderColor: #00bfff;
+
+  --borderRadius: 14px;
+  --borderRadiusButton: 3px;
+}
+/* All body */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: var(--firstColor);
+  background-color: var(--latarBackground);
+  margin: 0px;
+}
+/* All contain */
+#container {
+  width: 1100px;
+  height: auto;
+  margin: 0px auto;
+  padding: 10px;
+}
+/* All header navigasi  */
+#container #header {
+  margin-top: 20px;
+}
+
+#container #header #menu {
+  background: var(--primaryNavBackground);
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+#container #header #menu #user {
+  float: left;
+  color: #ffffff;
+}
+#container #header #menu #user a {
+  color: var(--colorNavnoHover);
+  padding-right: 5px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+#container #header #menu #user a:hover {
+  color: var(--colorHover);
+}
+#container #header #menu #keranjang-button {
+  float: right;
+  padding: 2px 8px;
+  margin: 2px 2px;
+  background: var(--borderColor);
+  border: 0.5px solid var(--columnColor);
+  border-radius: var(--borderRadiusButton);
+}
+#container #header #menu #keranjang-button:hover {
+  background: var(--columnColor);
+}
+
+#container #header #menu #keranjang-button img {
+  vertical-align: bottom;
+}
+#container #content {
+  padding: 8px 0px;
+  overflow: hidden;
+}
+/* End of header navigasi */
+
+/* Formulir login dan register */
+/* formulir container-user-access dan container form */
+#container-user-access {
+  width: 350px;
+  height: auto;
+  margin: 50px auto;
+}
+#container-user-access #container-form {
+  width: 100%;
+  background: var(--columnColor);
+  color: var(--colorNavnoHover);
+  padding: 10px 20px;
+  border: 1px solid #00bfff;
+  border-radius: var(--borderRadius);
+}
+#container-user-access #container-form #php {
+  color: red;
+}
+#container-user-access #container-form .element-form {
+  margin: 6px 0px;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+.element-form label {
+  display: block;
+  font-weight: bold;
+  color: #ffffff;
+}
+.element-form span {
+  display: block;
+}
+.element-form span:focus {
+  outline: none;
+}
+.element-form input,
+.element-form textarea,
+.element-form select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  background: #f2f2f2;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadiusButton);
+}
+.element-form button {
+  background: var(--buttonnoHover);
+  border: 0.5px solid var(--buttonBorderColor);
+  color: #000000;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: var(--borderRadiusButton);
+  cursor: pointer;
+}
+.element-form button:hover {
+  background: var(--buttonBorderColor);
+  color: #000000;
+}
+.notif {
+  color: red;
+  font-size: 11px;
+  margin-top: 10px;
+}
+/* End of form login dan register */
+
+/* Start of id = "content" */
+/* Navigasi page profile */
+#content #bg-page-profile {
+  overflow: hidden;
+}
+#content #bg-page-profile #menu-profile {
+  float: left;
+  width: 244px;
+  background: var(--primaryNavBackground);
+}
+#menu-profile ul {
+  margin-left: 10px;
+  padding: 0px;
+  list-style: none;
+}
+#menu-profile ul li a {
+  display: block;
+  color: var(--colorNavnoHover);
+  text-decoration: none;
+  padding: 10px 10px;
+}
+#menu-profile ul li a:hover {
+  background-color: var(--columnColor);
+  color: #000000;
+}
+#menu-profile ul li a.active {
+  background-color: var(--borderColor);
+  color: #000000;
+}
+/* End of navigasi page profile */
+/* Start of profile-content */
+#bg-page-profile #profile-content {
+  float: left;
+  width: 840px;
+  background: var(--colorHover);
+  padding: 8px;
+}
+/* Start of Form Kategori */
+#bg-page-profile #profile-content #form-module {
+  width: 800px;
+  background: var(--columnColor);
+  padding: 12px 18px;
+  border: 1px solid #00bfff;
+}
+#form-module .element-form-module {
+  margin: 4px 0px;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+.element-form-module {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.element-form-module textarea,
+.element-form-module select {
+  width: 100%;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #f2f2f2;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadiusButton);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.element-form-module span {
+  display: block;
+}
+.element-form-module span:focus {
+  outline: none;
+}
+
+.element-form-module .element-type-text {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  background: #f2f2f2;
+  border: 1px solid var(--columnColor);
+  border-radius: var(--borderRadiusButton);
+}
+#form-module .element-form-button button {
+  background: var(--buttonnoHover);
+  border: 0.5px solid var(--buttonBorderColor);
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: var(--borderRadiusButton);
+  cursor: pointer;
+}
+#form-module .element-form-button button:hover {
+  background: var(--buttonBorderColor);
+  color: #000000;
+}
+/* End of Form Kategori */
+.tombol-action {
+  /* font-size: 10px; */
+  float: right;
+  display: block;
+  padding: 4px 12px;
+  margin: 4px 4px;
+  color: #000000;
+  text-decoration: none;
+  background: var(--borderColor);
+  border: 0.5px solid var(--columnColor);
+  border-radius: var(--borderRadiusButton);
+}
+.tombol-action:hover {
+  background: var(--columnColor);
+}
+/* End of profile-content */
+
+/* Start of table content */
+.table-list {
+  width: 836px;
+
+  /* border-collapse: collapse; */
+}
+.table-list tr.baris-title {
+  background: var(--colorTabel);
+}
+.table-list tr th,
+.table-list tr td {
+  padding: 8px 10px;
+  text-align: left;
+}
+.kolom-nomor {
+  width: 20px;
+  text-align: center;
+}
+.kolom-data {
+  text-align: left;
+}
+.status-action {
+  text-align: left;
+}
+.button-status {
+  float: left;
+  display: block;
+  padding: 4px 6px;
+  margin: 4px;
+  color: #000000;
+  text-decoration: none;
+  background: var(--borderColor);
+  border: 0.5px solid var(--columnColor);
+  border-radius: var(--borderRadiusButton);
+}
+.button-status:hover {
+  background-color: var(--columnColor);
+}
+.kanan {
+  text-align: right;
+}
+/* End of table content */
+#container #footer p {
+  background: var(--primaryNavBackground);
+  color: var(--colorNavnoHover);
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  padding: 10px 10px;
+  margin: 0px;
+}
