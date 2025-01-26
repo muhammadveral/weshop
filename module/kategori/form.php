@@ -15,6 +15,7 @@ if ($kategori_id) {
 }
 ?>
 <form id="form-module" action="<?php echo BASE_URL . "module/kategori/action.php?kategori_id=$kategori_id"; ?>" method="post">
+    <?php $notif = isset($_GET['notif']) ? $_GET['notif'] : false; ?>
     <!-- Kategori form -->
     <div class="element-form-module">
         <label>Kategori</label>
@@ -30,6 +31,12 @@ if ($kategori_id) {
             <input class="element-type-radio" name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
         </span>
     </div>
+    <!-- validasi kelengkapan data -->
+    <?php
+    if ($notif == "caution") {
+        echo "<div class='notif' >Maaf, data yang anda masukkan belum lengkap</div>";
+    }
+    ?>
     <!-- Submit -->
     <div class="element-form-button">
         <button name="button" type="submit" value="<?php echo $button; ?>">

@@ -10,6 +10,7 @@ $harga = "";
 $status = "";
 $button = "Add";
 
+// fungsi edit
 if ($barang_id) {
     $queryBarang = mysqli_query($koneksi, "SELECT * FROM barang WHERE barang_id='$barang_id'");
     $row = mysqli_fetch_array($queryBarang);
