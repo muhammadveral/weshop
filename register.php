@@ -54,7 +54,7 @@ if ($user_id) {
         </div>
         <?php
         // validasi kelengkapan data dan password
-        if ($notif == "require") {
+        if ($notif == "caution") {
             echo " <div class = 'notif'> Maaf, data yang harus anda isi belum lengkap </div>";
         } elseif ($notif == "email") {
             echo " <div class = 'notif'> Maaf, email yang anda masukkan sudah terdaftar </div>";

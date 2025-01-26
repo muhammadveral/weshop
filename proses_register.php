@@ -22,7 +22,7 @@ $dataForm = http_build_query($_POST);
 $query_data = mysqli_query($koneksi, "SELECT * FROM user WHERE email = '$email'");
 
 if (empty($nama_lengkap) || empty($email) || empty($alamat) || empty($phone) || empty($password)) {
-    header("location: " . BASE_URL . "index.php?page=register&notif=require&$dataForm");
+    header("location: " . BASE_URL . "index.php?page=register&notif=caution&$dataForm");
     // mengecek data email yang sama
 } elseif (mysqli_num_rows($query_data) == 1) {
     header("location: " . BASE_URL . "index.php?page=register&notif=email&$dataForm");

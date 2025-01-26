@@ -57,7 +57,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
         </div>
         <!-- FOOTER -->
         <div id="footer">
-            <p>&#169; Copyright by muhammadveral 2024</p>
+            <p>&#169; Copyright by @muhammadveral</p>
         </div>
     </div>
 </body>
