@@ -15,7 +15,9 @@ $query_data = mysqli_query($koneksi, "SELECT * FROM kategori WHERE kategori = '$
 // mengecek data dari formulir tambah kategori
 if (empty($kategori) ||  empty($status)) {
     header("location: " . BASE_URL . "index.php?page=my_profile&module=kategori&action=form&notif=caution&$dataForm");
-} else if ($button == "Add") {
+}
+
+if ($button == "Add") {
     mysqli_query($koneksi, "INSERT INTO kategori (kategori, status) 
                                             VALUES ('$kategori', '$status')");
     header("location: " . BASE_URL . "index.php?page=my_profile&module=barang&action=list");

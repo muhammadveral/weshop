@@ -31,6 +31,7 @@ if ($kategori_id) {
             <input class="element-type-radio" name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
         </span>
     </div>
+
     <!-- validasi kelengkapan data -->
     <?php
     if ($notif == "caution") {

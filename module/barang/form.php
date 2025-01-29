@@ -23,8 +23,11 @@ if ($barang_id) {
     $stok = $row['stok'];
     $status = $row['status'];
     $button = "Update";
+
+    $gambar = "<img src='" . BASE_URL . "images/barang/$gambar' />";
 }
 ?>
+
 <form id="form-module" action="<?php echo BASE_URL . "module/barang/action.php?barang_id=$barang_id"; ?>" method="post" enctype="multipart/form-data">
     <?php $notif = isset($_GET['notif']) ? $_GET['notif'] : false; ?>
     <!-- Kategori form -->
@@ -52,7 +55,7 @@ if ($barang_id) {
     <div class="element-form-module">
         <label>Spesifikasi</label>
         <span>
-            <textarea name="spesifikasi"><?php echo $spesifikasi; ?></textarea>
+            <textarea id="editor" name="spesifikasi"><?php echo $spesifikasi; ?></textarea>
         </span>
     </div>
 
@@ -74,7 +77,7 @@ if ($barang_id) {
     <div class="element-form-module">
         <label>Gambar Produk</label>
         <span>
-            <input type="file" name="file">
+            <input id="images" type="file" name="file"> <?php echo $gambar; ?>
         </span>
     </div>
     <!-- Status form -->
