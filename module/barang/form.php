@@ -5,6 +5,7 @@ $nama_barang = "";
 $kategori_id = "";
 $spesifikasi = "";
 $gambar = "";
+$keterangan_gambar = "";
 $stok = "";
 $harga = "";
 $status = "";
@@ -19,6 +20,7 @@ if ($barang_id) {
     $kategori_id = $row['kategori_id'];
     $spesifikasi = $row['spesifikasi'];
     $gambar = $row['gambar'];
+    $keterangan_gambar = "--'Pilih foto'";
     $harga = $row['harga'];
     $stok = $row['stok'];
     $status = $row['status'];
@@ -75,7 +77,7 @@ if ($barang_id) {
     </div>
     <!-- Upload File -->
     <div class="element-form-module">
-        <label>Gambar Produk</label>
+        <label>Gambar Produk <?php echo $keterangan_gambar; ?> </label>
         <span>
             <input id="images" type="file" name="file"> <?php echo $gambar; ?>
         </span>
@@ -84,8 +86,8 @@ if ($barang_id) {
     <div class="element-form-module">
         <label>Status</label>
         <span>
-            <input class="element-type-radio" name="status" type="radio" value="on" <?php echo ($status == "on") ? "checked" : ""; ?>> On
-            <input class="element-type-radio" name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
+            <input name="status" type="radio" value="on" <?php echo ($status == "on") ? "checked" : ""; ?>> On
+            <input name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
         </span>
     </div>
     <!-- validasi kelengkapan data -->

@@ -27,8 +27,8 @@ if ($kategori_id) {
     <div class="element-form-module">
         <label>Status</label>
         <span>
-            <input class="element-type-radio" name="status" type="radio" value="on" <?php echo ($status == "on") ? "checked" : ""; ?>> On
-            <input class="element-type-radio" name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
+            <input name="status" type="radio" value="on" <?php echo ($status == "on") ? "checked" : ""; ?>> On
+            <input name="status" type="radio" value="off" <?php echo ($status == "off") ? "checked" : ""; ?>> Off
         </span>
     </div>
 
