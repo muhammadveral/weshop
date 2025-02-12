@@ -38,7 +38,7 @@ body {
 
 #container #header #menu {
   background: var(--primaryNavBackground);
-  padding: 5px 10px;
+  padding: 6px 2px;
   overflow: hidden;
 }
 
@@ -48,8 +48,8 @@ body {
 }
 #container #header #menu #user a {
   color: var(--colorNavnoHover);
-  padding-right: 5px;
-  margin: 5px;
+  padding-right: 10px;
+  margin: 6px;
   display: inline-block;
   text-decoration: none;
 }
@@ -59,9 +59,9 @@ body {
 #container #header #menu #keranjang-button {
   float: right;
   padding: 2px 8px;
-  margin: 2px 2px;
+  margin: 2px 8px;
   background: var(--borderColor);
-  border: 0.5px solid var(--columnColor);
+  border: 1px solid var(--columnColor);
   border-radius: var(--borderRadiusButton);
 }
 #container #header #menu #keranjang-button:hover {
@@ -313,4 +313,100 @@ body {
   font-style: italic;
   padding: 10px 10px;
   margin: 0px;
+}
+/* Template main.php */
+#kiri {
+  width: 220px;
+  height: auto;
+  float: left;
+}
+#menu-kategori ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#menu-kategori ul li {
+  margin-bottom: 6px;
+}
+#menu-kategori ul li a {
+  display: block;
+  padding: 10px;
+  background-color: var(--primaryNavBackground);
+  border-radius: var(--borderRadius);
+  border: 0.5px solid var(--columnColor);
+  color: #ffffff;
+  text-decoration: none;
+}
+#menu-kategori ul li a:hover,
+#menu-kategori ul li a.active {
+  background-color: var(--columnColor);
+}
+#kanan {
+  width: 860px;
+  margin-left: 15px;
+  height: auto;
+  float: left;
+}
+#kanan #frame-barang ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+/* ini */
+#kanan #frame-barang ul li {
+  width: 240px;
+  background-color: #ffffff;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  border: 1px solid var(--colorTabel);
+  border-radius: var(--borderRadius);
+  float: left;
+}
+#kanan #frame-barang ul li p.price {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 8px;
+  color: var(--primaryNavBackground);
+}
+#kanan #frame-barang ul li a img {
+  display: block;
+  width: 240px;
+  margin-bottom: 4px;
+}
+#kanan #frame-barang ul li .keterangan_gambar {
+  border-top: 1px solid var(--columnColor);
+  border-bottom: 0.5px solid var(--columnColor);
+  padding: 12px 0px;
+  height: 60px;
+}
+#kanan #frame-barang ul li p {
+  text-align: center;
+  margin: 6px 0px;
+}
+#kanan #frame-barang ul li p a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+#kanan #frame-barang ul li .keterangan_gambar span {
+  display: block;
+  text-align: center;
+}
+#kanan #frame-barang .button-add-cart {
+  text-align: center;
+}
+#kanan #frame-barang .button-add-cart a {
+  background: var(--primaryNavBackground);
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 12px;
+  border-radius: var(--borderRadius);
+}
+#kanan #frame-barang .button-add-cart a:hover {
+  background: var(--columnColor);
 }

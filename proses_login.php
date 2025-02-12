@@ -18,5 +18,5 @@ if (mysqli_num_rows($query_data) == 0) {
     $_SESSION['level'] = $row['level'];
     $_SESSION['nama'] = $row['nama'];
 
-    header("location: " . BASE_URL . "index.php?page=my_profile&module=kategori&action=list");
+    header("location: " . BASE_URL . "index.php?page=my_profile&module=pesanan&action=list");
 }

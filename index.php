@@ -3,6 +3,7 @@ session_start();
 include_once("function/koneksi.php");
 include_once("function/helper.php");
 $page = isset($_GET['page']) ? $_GET['page'] : false;
+$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
@@ -13,9 +14,29 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weshop || Alat-alat elektronik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 12/02/2025 jQuery untuk slidesjs -->
+    <script src="<?php echo BASE_URL . "js/jquery-3.7.1.min.js"; ?>"> </script>
+    <script src="<?php echo BASE_URL . "js/slidesjs/source/jquery.slides.min.js"; ?>"> </script>
+    <!-- Play images otomatis -->
+    <script>
+        $(function() {
+            $('#slides').slidesjs({
+                height: 350,
+                play: {
+                    auto: true,
+                    interval: 3000,
+                },
+                navigation: false
+            });
+        });
+    </script>
+
+
     <link rel="stylesheet" href="<?php echo BASE_URL . "css/style.css" ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL . "css/banner.css" ?>">
 </head>
 
 <body>
@@ -51,7 +72,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
             if (file_exists($filename)) {
                 include_once($filename);
             } else {
-                echo "Sistem '$filename' belum tersedia";
+                include_once("main.php");
             }
             ?>
         </div>
