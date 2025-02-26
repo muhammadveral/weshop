@@ -8,6 +8,10 @@ $kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
 $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
+$keranjang = isset($_SESSION['keranjang']) ? $_SESSION['keranjang'] : false;
+$totalBarang = is_array($keranjang) ? count($keranjang) : 0;
+// Perlu menambahkan session dalam file kategori
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +65,11 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                 <div id="keranjang-button">
                     <a href="<?php echo BASE_URL . "index.php?page=keranjang"; ?>">
                         <img src="<?php echo BASE_URL . "images/cart.png" ?>">
+                        <?php
+                        if ($totalBarang != 0) {
+                            echo "<span class = 'total-barang'>$totalBarang</span>";
+                        }
+                        ?>
                     </a>
                 </div>
             </div>

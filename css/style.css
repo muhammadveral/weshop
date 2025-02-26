@@ -60,16 +60,26 @@ body {
   float: right;
   padding: 2px 8px;
   margin: 2px 8px;
-  background: var(--borderColor);
+  background: var(--columnColor);
   border: 1px solid var(--columnColor);
   border-radius: var(--borderRadiusButton);
 }
 #container #header #menu #keranjang-button:hover {
-  background: var(--columnColor);
+  background: var(--borderColor);
 }
 
 #container #header #menu #keranjang-button img {
   vertical-align: bottom;
+}
+#keranjang-button a {
+  text-decoration: none;
+}
+#keranjang-button .total-barang {
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  vertical-align: top;
+  color: var(--colorHover);
 }
 #container #content {
   padding: 8px 0px;
@@ -342,7 +352,7 @@ body {
   background-color: var(--columnColor);
 }
 #kanan {
-  width: 860px;
+  width: 865px;
   margin-left: 15px;
   height: auto;
   float: left;
@@ -409,4 +419,44 @@ body {
 }
 #kanan #frame-barang .button-add-cart a:hover {
   background: var(--columnColor);
+}
+
+#detail-barang {
+  background: var(--colorHover);
+  padding: 15px;
+}
+#detail-barang h2 {
+  margin-top: 0px;
+}
+#detail-barang #frame-gambar {
+  background: var(--latarBackground);
+  padding: 20px;
+}
+#detail-barang #frame-gambar img {
+  display: block;
+  margin: 0px auto;
+}
+#detail-barang #frame-harga {
+  margin: 15px 0px;
+}
+#detail-barang #frame-harga span {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--firstColor);
+}
+#detail-barang #frame-harga a {
+  background: var(--columnColor);
+  border: 1px solid var(--columnColor);
+  border-radius: var(--borderRadius);
+  color: var(--colorHover);
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  float: right;
+}
+#detail-barang #frame-harga a:hover {
+  background: var(--borderColor);
+}
+#detail-barang #keterangan {
+  margin: 20px 0px;
 }
