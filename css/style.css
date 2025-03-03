@@ -315,6 +315,50 @@ body {
   text-align: right;
 }
 /* End of table content */
+/* Start of table keranjang */
+.table-list-keranjang {
+  width: 1100px;
+
+  /* border-collapse: collapse; */
+}
+.table-list-keranjang tr.baris-title {
+  background: var(--colorTabel);
+}
+.table-list-keranjang tr th,
+.table-list-keranjang tr td {
+  padding: 8px 10px;
+  text-align: left;
+}
+.kolom-nomor {
+  width: 20px;
+  text-align: center;
+}
+.kolom-data {
+  text-align: left;
+}
+.update-quantity {
+  width: 20px;
+  text-align: center;
+}
+.status-action {
+  text-align: left;
+}
+.button-status {
+  float: left;
+  display: block;
+  padding: 4px 6px;
+  margin: 4px;
+  color: #000000;
+  text-decoration: none;
+  background: var(--borderColor);
+  border: 0.5px solid var(--columnColor);
+  border-radius: var(--borderRadiusButton);
+}
+.button-status:hover {
+  background-color: var(--columnColor);
+}
+
+/* End of Tabel keranjang */
 #container #footer p {
   background: var(--primaryNavBackground);
   color: var(--colorNavnoHover);
